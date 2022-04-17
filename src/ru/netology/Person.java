@@ -17,19 +17,33 @@ public class Person {
         this.age = age;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+       return name;
+   }
 
-    public String getSurname() { return surname; }
+    public String getSurname() {
+       return surname;
+   }
 
-    public int getAge() { return age; }
+    public int getAge() {
+       return age;
+   }
 
-    public String getAddress() { return address; }
+    public String getAddress() {
+       return address;
+   }
 
-    public boolean hasAge() { return (age != -1); }
+    public boolean hasAge() {
+       return (age != -1);
+   }
 
-    public boolean hasAddress() { return (address != null); }
+    public boolean hasAddress() {
+       return (address != null);
+   }
 
-    public void setAddress(String address) { this.address = address; }
+    public void setAddress(String address) {
+       this.address = address;
+   }
 
     public void happyBirthday() {
        if (hasAge()) age = age + 1;
