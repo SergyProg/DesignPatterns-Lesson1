@@ -6,7 +6,7 @@ public class Person {
     protected int age = -1;
     protected String address;
 
-   public Person(String name, String surname) {
+    public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
@@ -18,52 +18,52 @@ public class Person {
     }
 
     public String getName() {
-       return name;
-   }
+        return name;
+    }
 
     public String getSurname() {
-       return surname;
-   }
+        return surname;
+    }
 
     public int getAge() {
-       return age;
-   }
+        return age;
+    }
 
     public String getAddress() {
-       return address;
-   }
+        return address;
+    }
 
     public boolean hasAge() {
-       return (age != -1);
-   }
+        return (age != -1);
+    }
 
     public boolean hasAddress() {
-       return (address != null);
-   }
+        return (address != null);
+    }
 
     public void setAddress(String address) {
-       this.address = address;
-   }
+        this.address = address;
+    }
 
     public void happyBirthday() {
-       if (hasAge()) age = age + 1;
-   }
+        if (hasAge()) age = age + 1;
+    }
 
-    public PersonBuilder newChildBuilder(){
-       PersonBuilder personBuilder = new PersonBuilder()
-               .setSurname(surname)
-               .setAge(0);
-       if(hasAddress()){
-           personBuilder = personBuilder.setAddress(address);
-       }
+    public PersonBuilder newChildBuilder() {
+        PersonBuilder personBuilder = new PersonBuilder()
+                .setSurname(surname)
+                .setAge(0);
+        if (hasAddress()) {
+            personBuilder = personBuilder.setAddress(address);
+        }
 
-       return personBuilder;
+        return personBuilder;
     }
 
     @Override
     public String toString() {
-       return "<" + name + " " + surname + " " +
-               (hasAge() ?  (age == 0) ? "новорождённый" : "возраст: " + age : "") +
-               (hasAddress() ? ", проживает по адресу: " + address : "") + ">";
+        return "<" + name + " " + surname + " " +
+                (hasAge() ? (age == 0) ? "новорождённый" : "возраст: " + age : "") +
+                (hasAddress() ? ", проживает по адресу: " + address : "") + ">";
     }
 }
